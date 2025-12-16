@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECLIPSE | Heavy RR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero__top">
+            <button class="mobile-menu-toggle" aria-label="Меню" data-mobile-menu-toggle>
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a class="logo" href="index.html">ECLIPSE</a>
+            <nav class="nav" data-mobile-menu>
+                <a href="#collection">КОЛЛЕКЦИИ</a>
+                <a href="pages/women.html">ЖЕНЩИНЫ</a>
+                <a href="pages/men.html">МУЖЧИНЫ</a>
+                <div class="mobile-menu-actions">
+                    <!-- ========== ИКОНКА АККАУНТА (МОБИЛЬНОЕ МЕНЮ) ========== -->
+                    <a class="mobile-menu-link icon-btn--profile" href="pages/register.html">
+                        <img src="images/account.svg" alt="Аккаунт" width="20" height="20">
+                        <span>Аккаунт</span>
+                    </a>
+                    <!-- ========== ИКОНКА КОРЗИНЫ (МОБИЛЬНОЕ МЕНЮ) ========== -->
+                    <button class="mobile-menu-link icon-btn--cart" data-panel-target="cart">
+                        <img src="images/cart-svgrepo-com.svg" alt="Корзина" width="20" height="20">
+                        <span>Корзина</span>
+                        <span class="pill" data-cart-count>0</span>
+                    </button>
+                </div>
+            </nav>
+            <div class="actions">
+                <!-- ========== ИКОНКА АККАУНТА (ДЕСКТОП) ========== -->
+                <a class="icon-btn icon-btn--profile" aria-label="Профиль" href="pages/register.html">
+                    <img src="images/account.svg" alt="Аккаунт" width="20" height="20">
+                </a>
+                <!-- ========== ИКОНКА КОРЗИНЫ (ДЕСКТОП) ========== -->
+                <button class="icon-btn icon-btn--cart" aria-label="Корзина" data-panel-target="cart">
+                    <img src="images/cart-svgrepo-com.svg" alt="Корзина" width="20" height="20">
+                    <span class="pill" data-cart-count>0</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="hero__content">
+            <p class="eyebrow">НОВАЯ КОЛЛЕКЦИЯ</p>
+            <h1>HEAVY RR</h1>
+            <p class="lead">Откройте для себя коллекцию, где тьма встречается со светом.</p>
+            <a class="primary-btn" href="#collection">СМОТРЕТЬ</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="collection" class="collection">
+            <p class="eyebrow">КАТАЛОГ</p>
+            <h2>COLLECTION</h2>
+
+            <div class="filters">
+                <button class="chip chip--active" data-filter="all">ВСЕ</button>
+                <button class="chip" data-filter="new">НОВИНКИ</button>
+                <button class="chip" data-filter="top">ВЕРХНЯЯ</button>
+                <button class="chip" data-filter="bottom">НИЖНЯЯ</button>
+            </div>
+
+            <div class="grid" data-product-grid></div>
+        </section>
+
+
+        <section class="promo-banners">
+            <div class="promo-banner promo-banner--party">
+                <div class="promo-banner__image">
+                    <img src="images/tishka1.jpg" alt="Пиджаки">
+                </div>
+                <div class="promo-banner__content">
+                    <h2>ВЕЧЕРНИЙ ОБРАЗ</h2>
+                    <div class="promo-banner__links">
+                        <a href="pages/women.html?filter=evening">Для неё</a>
+                        <span>|</span>
+                        <a href="pages/men.html?filter=evening">Для него</a>
+                    </div>
+                </div>
+            </div>
+            <div class="promo-banner promo-banner--gifts">
+                <div class="promo-banner__image">
+                    <img src="images/paltowoomen2.jpg" alt="Идеи для подарков">
+                </div>
+                <div class="promo-banner__content">
+                    <h2>СТРОГИЕ ОБРАЗЫ</h2>
+                    <div class="promo-banner__links">
+                        <a href="pages/women.html?filter=formal">Для неё</a>
+                        <span>|</span>
+                        <a href="pages/men.html?filter=formal">Для него</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="loyalty-banner">
+            <div class="loyalty-banner__ornament loyalty-banner__ornament--top"></div>
+            <div class="loyalty-banner__main">
+                <div class="loyalty-banner__content">
+                    <div class="loyalty-banner__decorative-line"></div>
+                    <h2 class="loyalty-banner__title">ECLIPSE CLUB</h2>
+                    <div class="loyalty-banner__decorative-line"></div>
+                    <p class="loyalty-banner__subtitle">получи 300 бонусов за первый заказ</p>
+                </div>
+                <div class="loyalty-banner__coins">
+                    <div class="loyalty-coin"><span>E</span></div>
+                    <div class="loyalty-coin"><span>E</span></div>
+                    <div class="loyalty-coin"><span>E</span></div>
+                </div>
+                <div class="loyalty-banner__gothic-pattern"></div>
+            </div>
+            <div class="loyalty-banner__info">
+                <div class="loyalty-info-item">
+                    <div class="loyalty-info-icon">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <p>Кэшбек 5% с каждого заказа бонусами</p>
+                </div>
+                <div class="loyalty-info-item">
+                    <div class="loyalty-info-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <p>Оплачивай до 50% заказа бонусами</p>
+                </div>
+            </div>
+            <div class="loyalty-banner__ornament loyalty-banner__ornament--bottom"></div>
+        </section>
+
+    </main>
+
+    <div class="overlay" data-overlay hidden></div>
+
+    <section class="panel" data-panel="cart" aria-hidden="true">
+        <div class="panel__header">
+            <h3>Корзина</h3>
+            <button class="icon-btn" data-close-panel aria-label="Закрыть">✕</button>
+        </div>
+        <div class="panel__body">
+            <p class="panel__empty" data-cart-empty>Ваша корзина пуста. Добавьте вещи, чтобы продолжить.</p>
+            <ul class="cart-list" data-cart-list></ul>
+        </div>
+        <div class="panel__footer">
+            <div>
+                <span>Итого</span>
+                <strong data-cart-total>0 ₽</strong>
+            </div>
+            <button class="primary-btn" data-checkout>ОФОРМИТЬ</button>
+        </div>
+    </section>
+
+    <!-- Модальное окно поддержки -->
+    <div class="support-modal" id="support-modal" hidden>
+        <div class="support-modal__content">
+            <div class="support-modal__header">
+                <h2>Свяжитесь с поддержкой</h2>
+                <button class="support-modal__close" data-close-support aria-label="Закрыть">✕</button>
+            </div>
+            <form class="support-form" id="support-form">
+                <div class="form-group">
+                    <label for="support-name">Ваше имя</label>
+                    <input type="text" id="support-name" name="name" required placeholder="Иван Иванов">
+                </div>
+                <div class="form-group">
+                    <label for="support-email">Email</label>
+                    <input type="email" id="support-email" name="email" required placeholder="ivan@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="support-message">Опишите проблему</label>
+                    <textarea id="support-message" name="message" required rows="5" placeholder="Расскажите о вашей проблеме или вопросе..."></textarea>
+                </div>
+                <button type="submit" class="primary-btn">ОТПРАВИТЬ</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__brand">
+            <div class="logo">ECLIPSE</div>
+            <p>Магазин одежды с собственной историей</p>
+        </div>
+        <div class="footer__menus">
+            <div>
+                <h3>НАВИГАЦИЯ</h3>
+                <a href="#collection">Коллекции</a>
+                <a href="#" onclick="return false;">О нас</a>
+            </div>
+            <div>
+                <h3 class="footer-help-link" data-open-support>ПОМОЩЬ</h3>
+                <a href="#">Доставка</a>
+                <a href="#">Возврат</a>
+                <a href="#">FAQ</a>
+                <a href="#">Размеры</a>
+            </div>
+        </div>
+        <p class="footer__copyright">ECLIPSE 2025. Copyright non commercial use</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/support.js"></script>
+</body>
+</html>
+
