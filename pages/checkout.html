@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECLIPSE | Оформление заказа</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body class="checkout-page">
+    <div class="checkout-header">
+        <a href="../index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Вернуться в магазин
+        </a>
+        <h1>ОФОРМЛЕНИЕ ЗАКАЗА</h1>
+        <p class="checkout-header__subtitle">Заполните данные для доставки</p>
+    </div>
+
+    <div class="checkout-container">
+        <div class="checkout-form">
+            <h2>Данные получателя</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">Имя и фамилия *</label>
+                    <input type="text" id="name" name="name" required placeholder="Иван Иванов">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 123-45-67">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="ivan@example.com">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="delivery">Способ доставки *</label>
+                    <select id="delivery" name="delivery" required>
+                        <option value="">Выберите способ доставки</option>
+                        <option value="courier">Курьером (2-4 дня) - 500 ₽</option>
+                        <option value="pickup">Самовывоз (завтра) - Бесплатно</option>
+                        <option value="post">Почтой России (5-10 дней) - 300 ₽</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Адрес доставки *</label>
+                    <textarea id="address" name="address" required placeholder="Город, улица, дом, квартира"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Комментарий к заказу</label>
+                    <textarea id="comment" name="comment" placeholder="Дополнительная информация для курьера"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <div class="checkout-summary">
+            <h2>Ваш заказ</h2>
+            <div class="summary-items" id="summary-items"></div>
+            <div class="summary-total" id="summary-total"></div>
+            <button type="button" class="checkout-btn checkout-btn--bonus" id="pay-with-bonuses">
+                ОПЛАТИТЬ ЧАСТЬ БОНУСАМИ
+            </button>
+            <button type="submit" form="checkout-form" class="checkout-btn" id="submit-order">
+                ОФОРМИТЬ ЗАКАЗ
+            </button>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECLIPSE | Каталог для мужчин</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="../css/men.css">
+</head>
+<body class="catalog-page-body">
+    <header class="catalog-header">
+        <button class="mobile-menu-toggle" aria-label="Меню" data-mobile-menu-toggle>
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <a class="logo" href="../index.html">ECLIPSE</a>
+            <nav class="nav nav--catalog" data-mobile-menu>
+                <a href="../index.html">ГЛАВНАЯ</a>
+                <a href="./women.html">ЖЕНЩИНАМ</a>
+                <a href="./men.html" class="is-active">МУЖЧИНАМ</a>
+                <div class="mobile-menu-actions">
+                    <!-- ========== ИКОНКА АККАУНТА (МОБИЛЬНОЕ МЕНЮ) ========== -->
+                    <a class="mobile-menu-link icon-btn--profile" href="../register.html">
+                        <img src="../images/account.svg" alt="Аккаунт" width="20" height="20">
+                        <span>Аккаунт</span>
+                    </a>
+                    <!-- ========== ИКОНКА КОРЗИНЫ (МОБИЛЬНОЕ МЕНЮ) ========== -->
+                    <button class="mobile-menu-link icon-btn--cart" data-panel-target="cart">
+                        <img src="../images/cart-svgrepo-com.svg" alt="Корзина" width="20" height="20">
+                        <span>Корзина</span>
+                        <span class="pill" data-cart-count>0</span>
+                    </button>
+                </div>
+            </nav>
+        <div class="actions">
+            <!-- ========== ИКОНКА АККАУНТА (ДЕСКТОП) ========== -->
+            <a class="icon-btn icon-btn--profile" aria-label="Профиль" href="../register.html">
+                <img src="../images/account.svg" alt="Аккаунт" width="20" height="20">
+            </a>
+            <!-- ========== ИКОНКА КОРЗИНЫ (ДЕСКТОП) ========== -->
+            <button class="icon-btn icon-btn--cart" aria-label="Корзина" data-panel-target="cart">
+                <img src="../images/cart-svgrepo-com.svg" alt="Корзина" width="20" height="20">
+                <span class="pill" data-cart-count>0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="catalog-page">
+        <section class="catalog-hero">
+            <p class="eyebrow">мужская линия</p>
+            <h1>ОДЕЖДА ДЛЯ МУЖЧИН</h1>
+            <p>Фактурные жакеты, продуманные слои и универсальные формы. Коллекция сочетает брутальность и архитектурную чистоту, создавая интеллектуальные силуэты для современного мужчины.</p>
+        </section>
+
+        <section class="catalog-toolbar">
+            <div class="catalog-filters">
+                <button class="chip chip--active" data-filter="all">Все</button>
+                <button class="chip" data-filter="jacket">Куртки</button>
+                <button class="chip" data-filter="tshirt">Футболки</button>
+                <button class="chip" data-filter="underwear">Нижняя одежда</button>
+                <button class="chip" data-filter="blazer">Пиджаки</button>
+                <button class="chip" data-filter="evening">Вечерний</button>
+                <button class="chip" data-filter="formal">Официальный</button>
+            </div>
+        </section>
+
+        <section class="catalog-grid">
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-1" data-category="jacket">
+                <article class="catalog-card" data-product-id="shadow-jacket-1">
+                    <img src="../images/kurtka1.jpg" alt="Shadow Blazer">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Shadow Blazer</p>
+                            <span>Жакет, шерсть</span>
+                        </div>
+                        <strong>32 400 ₽</strong>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-1">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-2" data-category="jacket">
+                <article class="catalog-card" data-product-id="shadow-jacket-2">
+                    <img src="../images/kurtka2.jpg" alt="Nebula Coat">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Nebula Coat</p>
+                            <span>Пальто, кашемир</span>
+                        </div>
+                        <strong>45 900 ₽</strong>
+                    </div>
+                    <div class="catalog-card__tags">
+                        <span class="catalog-tag">новинка</span>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-2">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-4" data-category="blazer">
+                <article class="catalog-card" data-product-id="shadow-jacket-4">
+                    <img src="../images/pidjack.jpg" alt="Night Runner">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Night Runner</p>
+                            <span>Техно-костюм</span>
+                        </div>
+                        <strong>28 700 ₽</strong>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-4">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-5" data-category="blazer">
+                <article class="catalog-card" data-product-id="shadow-jacket-5">
+                    <img src="../images/pidjackmen 8.jpg" alt="Gravité Boots">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Gravité Boots</p>
+                            <span>Кожа / резина</span>
+                        </div>
+                        <strong>22 300 ₽</strong>
+                    </div>
+                    <div class="catalog-card__tags">
+                        <span class="catalog-tag catalog-tag--sale">-15%</span>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-5">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-1" data-category="blazer formal">
+                <article class="catalog-card" data-product-id="shadow-jacket-1">
+                    <img src="../images/pidjackmen 9.jpg.webp" alt="Classic Suit">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Classic Suit</p>
+                            <span>Классический костюм</span>
+                        </div>
+                        <strong>38 900 ₽</strong>
+                    </div>
+                    <div class="catalog-card__tags">
+                        <span class="catalog-tag">новинка</span>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-1">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-2" data-category="blazer">
+                <article class="catalog-card" data-product-id="shadow-jacket-2">
+                    <img src="../images/pidjack4.jpg" alt="Sport Jacket">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Sport Jacket</p>
+                            <span>Спортивная куртка</span>
+                        </div>
+                        <strong>21 500 ₽</strong>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-2">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-3" data-category="underwear evening">
+                <article class="catalog-card" data-product-id="shadow-jacket-3">
+                    <img src="../images/pants1.jpg" alt="Leather Boots">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Leather Boots</p>
+                            <span>Кожаные ботинки</span>
+                        </div>
+                        <strong>31 200 ₽</strong>
+                    </div>
+                    <div class="catalog-card__tags">
+                        <span class="catalog-tag catalog-tag--sale">-15%</span>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-3">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-4" data-category="underwear">
+                <article class="catalog-card" data-product-id="shadow-jacket-4">
+                    <img src="../images/pants2.jpg" alt="Business Suit">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Business Suit</p>
+                            <span>Деловой костюм</span>
+                        </div>
+                        <strong>42 100 ₽</strong>
+                    </div>
+                    <div class="catalog-card__tags">
+                        <span class="catalog-tag">новинка</span>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-4">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-5" data-category="underwear evening">
+                <article class="catalog-card" data-product-id="shadow-jacket-5">
+                    <img src="../images/pants3.jpg" alt="Casual Jacket">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Casual Jacket</p>
+                            <span>Повседневный жакет</span>
+                        </div>
+                        <strong>19 800 ₽</strong>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-5">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-6" data-category="underwear evening">
+                <article class="catalog-card" data-product-id="shadow-jacket-6">
+                    <img src="../images/pants4.jpg" alt="Training Set">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Training Set</p>
+                            <span>Спортивный комплект</span>
+                        </div>
+                        <strong>16 500 ₽</strong>
+                    </div>
+                    <div class="catalog-card__tags">
+                        <span class="catalog-tag catalog-tag--sale">-15%</span>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-6">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-1" data-category="underwear">
+                <article class="catalog-card" data-product-id="shadow-jacket-1">
+                    <img src="../images/pants5.jpg" alt="Formal Suit">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Formal Suit</p>
+                            <span>Формальный костюм</span>
+                        </div>
+                        <strong>45 200 ₽</strong>
+                    </div>
+                    <div class="catalog-card__tags">
+                        <span class="catalog-tag">новинка</span>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-1">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-2" data-category="underwear evening">
+                <article class="catalog-card" data-product-id="shadow-jacket-2">
+                    <img src="../images/pants6.jpg" alt="Sneakers">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Sneakers</p>
+                            <span>Кроссовки</span>
+                        </div>
+                        <strong>18 900 ₽</strong>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-2">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-3" data-category="tshirt evening">
+                <article class="catalog-card" data-product-id="shadow-jacket-3">
+                    <img src="../images/tishka1.jpg" alt="Track Jacket">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Track Jacket</p>
+                            <span>Тренировочная куртка</span>
+                        </div>
+                        <strong>17 200 ₽</strong>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-3">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-4" data-category="tshirt evening">
+                <article class="catalog-card" data-product-id="shadow-jacket-4">
+                    <img src="../images/tishka2.jpg" alt="Wool Jacket">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Wool Jacket</p>
+                            <span>Шерстяной жакет</span>
+                        </div>
+                        <strong>36 100 ₽</strong>
+                    </div>
+                    <div class="catalog-card__tags">
+                        <span class="catalog-tag">новинка</span>
+                        <span class="catalog-tag catalog-tag--sale">-15%</span>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-4">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-5" data-category="tshirt evening">
+                <article class="catalog-card" data-product-id="shadow-jacket-5">
+                    <img src="../images/tishka3.jpg" alt="Dress Shoes">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Dress Shoes</p>
+                            <span>Туфли</span>
+                        </div>
+                        <strong>28 900 ₽</strong>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-5">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-6" data-category="underwear">
+                <article class="catalog-card" data-product-id="shadow-jacket-6">
+                    <img src="../images/pants5.jpg" alt="Athletic Set">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Athletic Set</p>
+                            <span>Атлетический комплект</span>
+                        </div>
+                        <strong>22 400 ₽</strong>
+                    </div>
+                    <div class="catalog-card__tags">
+                        <span class="catalog-tag catalog-tag--sale">-15%</span>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-6">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-1" data-category="blazer">
+                <article class="catalog-card" data-product-id="shadow-jacket-1">
+                    <img src="../images/pants6.jpg" alt="Premium Jacket">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Premium Jacket</p>
+                            <span>Премиум жакет / кашемир</span>
+                        </div>
+                        <strong>52 300 ₽</strong>
+                    </div>
+                    <div class="catalog-card__tags">
+                        <span class="catalog-tag">новинка</span>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-1">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+            <a class="catalog-card-link" href="product.html?id=shadow-jacket-2" data-category="blazer formal">
+                <article class="catalog-card" data-product-id="shadow-jacket-2">
+                    <img src="../images/pidjackmen 7.jpg" alt="Classic Boots">
+                    <div class="catalog-card__meta">
+                        <div>
+                            <p>Classic Boots</p>
+                            <span>Классические ботинки / кожа</span>
+                        </div>
+                        <strong>34 800 ₽</strong>
+                    </div>
+                    <div class="catalog-card__tags">
+                        <span class="catalog-tag catalog-tag--sale">-15%</span>
+                    </div>
+                    <button class="catalog-card__cta-btn" data-add-to-cart data-product-id="shadow-jacket-2">ДОБАВИТЬ В КОРЗИНУ</button>
+                </article>
+            </a>
+
+        </section>
+    </main>
+
+    <div class="overlay" data-overlay hidden></div>
+
+    <section class="panel" data-panel="cart" aria-hidden="true">
+        <div class="panel__header">
+            <h3>Корзина</h3>
+            <button class="icon-btn" data-close-panel aria-label="Закрыть">✕</button>
+        </div>
+        <div class="panel__body">
+            <p class="panel__empty" data-cart-empty>Ваша корзина пуста. Добавьте вещи, чтобы продолжить.</p>
+            <ul class="cart-list" data-cart-list></ul>
+        </div>
+        <div class="panel__footer">
+            <div>
+                <span>Итого</span>
+                <strong data-cart-total>0 ₽</strong>
+            </div>
+            <button class="primary-btn" data-checkout>ОФОРМИТЬ</button>
+        </div>
+    </section>
+
+    <section class="panel" data-panel="profile" aria-hidden="true">
+        <div class="panel__header">
+            <h3>Личный кабинет</h3>
+            <button class="icon-btn" data-close-panel aria-label="Закрыть">✕</button>
+        </div>
+        <div class="panel__body">
+            <form class="profile-form" data-profile-form>
+                <label>
+                    Имя
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="you@example.com" required>
+                </label>
+                <label>
+                    Телефон
+                    <input type="tel" name="phone" placeholder="+7 (999) 000‑00‑00" required>
+                </label>
+                <label>
+                    Адрес доставки
+                    <textarea name="address" rows="3" placeholder="Город, улица, дом" required></textarea>
+                </label>
+                <button class="primary-btn" type="submit">СОХРАНИТЬ</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer footer--catalog">
+        <p class="footer__copyright">ECLIPSE 2025. Copyright non commercial use</p>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/catalog.js"></script>
+</body>
+</html>
+

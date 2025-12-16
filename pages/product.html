@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECLIPSE | Товар</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="product-page">
+    <header class="catalog-header">
+        <button class="mobile-menu-toggle" aria-label="Меню" data-mobile-menu-toggle>
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <a class="logo" href="../index.html">ECLIPSE</a>
+        <nav class="nav nav--catalog" data-mobile-menu>
+            <a href="../index.html">Главная</a>
+            <a href="women.html">Женщинам</a>
+            <a href="men.html">Мужчинам</a>
+            <div class="mobile-menu-actions">
+                <!-- ========== ИКОНКА АККАУНТА (МОБИЛЬНОЕ МЕНЮ) ========== -->
+                <a class="mobile-menu-link icon-btn--profile" href="register.html">
+                    <img src="../images/account.svg" alt="Аккаунт" width="20" height="20">
+                    <span>Аккаунт</span>
+                </a>
+                <!-- ========== ИКОНКА КОРЗИНЫ (МОБИЛЬНОЕ МЕНЮ) ========== -->
+                <button class="mobile-menu-link icon-btn--cart" data-panel-target="cart">
+                    <img src="../images/cart-svgrepo-com.svg" alt="Корзина" width="20" height="20">
+                    <span>Корзина</span>
+                    <span class="pill" data-cart-count>0</span>
+                </button>
+            </div>
+        </nav>
+        <div class="actions">
+            <!-- ========== ИКОНКА КОРЗИНЫ (ДЕСКТОП) ========== -->
+            <button class="icon-btn icon-btn--cart" aria-label="Корзина" data-panel-target="cart">
+                <img src="../images/cart-svgrepo-com.svg" alt="Корзина" width="20" height="20">
+                <span class="pill" data-cart-count>0</span>
+            </button>
+        </div>
+    </header>
+    <main class="product-hero product-hero--page">
+        <div class="product-hero__gallery product-hero__gallery--single">
+            <img src="" alt="" class="product-hero__image" data-product-image>
+        </div>
+        <div class="product-hero__info">
+            <p class="eyebrow" data-product-collection>ECLIPSE / LIMITED</p>
+            <h3 data-product-title>Название товара</h3>
+            <div class="product-hero__price">
+                <span class="price-main" data-product-price>—</span>
+                <span class="price-old" data-product-old-price hidden>—</span>
+                <span class="badge badge--sale" data-product-sale hidden>-</span>
+            </div>
+            <p class="product-hero__desc" data-product-desc>
+                Описание будет добавлено.
+            </p>
+            <div class="product-hero__sizes">
+                <span class="product-hero__sizes-label">Размер</span>
+                <div class="product-hero__sizes-grid" data-product-sizes>
+                    <button class="size-btn size-btn--active">S</button>
+                    <button class="size-btn">M</button>
+                    <button class="size-btn">L</button>
+                </div>
+            </div>
+            <div class="product-hero__actions">
+                <button class="primary-btn product-hero__cta" type="button">ДОБАВИТЬ В КОРЗИНУ</button>
+                <button class="ghost-btn product-hero__ghost" type="button" onclick="history.back()">НАЗАД</button>
+            </div>
+            <div class="product-hero__meta">
+                <span>Доставка: 2-4 дня</span>
+                <span>Самовывоз: завтра</span>
+            </div>
+        </div>
+    </main>
+
+    <div class="overlay" data-overlay hidden></div>
+
+    <section class="panel" data-panel="cart" aria-hidden="true">
+        <div class="panel__header">
+            <h3>Корзина</h3>
+            <button class="icon-btn" data-close-panel aria-label="Закрыть">✕</button>
+        </div>
+        <div class="panel__body">
+            <p class="panel__empty" data-cart-empty>Ваша корзина пуста. Добавьте вещи, чтобы продолжить.</p>
+            <ul class="cart-list" data-cart-list></ul>
+        </div>
+        <div class="panel__footer">
+            <div>
+                <span>Итого</span>
+                <strong data-cart-total>0 ₽</strong>
+            </div>
+            <button class="primary-btn" data-checkout>ОФОРМИТЬ</button>
+        </div>
+    </section>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/product.js"></script>
+</body>
+</html>
+
