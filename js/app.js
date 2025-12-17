@@ -13,6 +13,7 @@ if (document.readyState === 'loading') document.addEventListener('DOMContentLoad
 else scrollTop();
 
 // Корзина
+const MAX_CART_ITEMS = 20;
 let cart = [];
 const loadCart = () => {
   try { cart = JSON.parse(localStorage.getItem('eclipseCart') || '[]'); } catch { cart = []; }
@@ -101,8 +102,15 @@ const notify = (name) => {
 // Добавление в корзину
 const addToCart = (p) => {
   loadCart();
+  const total = cart.reduce((s, i) => s + i.qty, 0);
+  if (total >= MAX_CART_ITEMS) { alert(`В корзине может быть не более ${MAX_CART_ITEMS} товаров.`); return; }
   const e = cart.find(i => i.id === p.id);
-  e ? e.qty++ : cart.push({ ...p, qty: 1 });
+  if (e) {
+    if (total + 1 > MAX_CART_ITEMS) { alert(`В корзине может быть не более ${MAX_CART_ITEMS} товаров.`); return; }
+    e.qty++;
+  } else {
+    cart.push({ ...p, qty: 1 });
+  }
   saveCart();
   updateCartUI();
   notify(p.name);
@@ -118,7 +126,11 @@ document.addEventListener('click', e => {
       const id = ci.dataset.id;
       const item = cart.find(i => i.id === id);
       if (item) {
-        if (a.dataset.action === 'increase') item.qty++;
+        if (a.dataset.action === 'increase') {
+          const total = cart.reduce((s, i) => s + i.qty, 0);
+          if (total >= MAX_CART_ITEMS) { alert(`В корзине может быть не более ${MAX_CART_ITEMS} товаров.`); return; }
+          item.qty++;
+        }
         else if (a.dataset.action === 'decrease') item.qty = Math.max(1, item.qty - 1);
         else if (a.dataset.action === 'remove') cart.splice(cart.findIndex(i => i.id === id), 1);
         saveCart();
